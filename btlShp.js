@@ -121,28 +121,27 @@ var fireShot = function () {
 
 
 
-function hitShip(shot, ship) {
-  var commandMessage = document.getElementById("commandMessage");
-  var sunkShip = document.getElementById("sunkShip");
-  console.log(ship);
-  console.log(shot);
-  console.log(ship.includes(shot));
-  if (ship.includes(shot) && !attempPositions.toString().includes(shot)) {
-    commandMessage.innerHTML = "Hit, nice work commander!";
-    console.log("Hit, nice work commander!");
-    console.log(`attempPositions ${attempPositions}`)
-    hits++;
-    if (hits == 3) {
-      sunkShip.innerHTML = `Congradulations commander we have sunk the enemy ship!`;
-      console.log(`Congradulations commander we have sunk the enemy ship!`);
-      hits = 0;
-    }
-  } else if (attempPositions.toString().includes(shot)) {
-    commandMessage.innerHTML = "We have already fired on that position commader try again.";
-    console.log("We have already fired on that position commader try again.")
-  } else {
-    commandMessage.innerHTML = "We have missed commander. Lets try again!";
-    console.log("We have missed commander. Lets try again!");
-  }
-
-}
+-function hitShip(shot, ship) {		
+-  var commandMessage = document.getElementById("commandMessage");		
+-  var sunkShip = document.getElementById("sunkShip");		
+-  console.log(ship);		
+-  console.log(shot);		
+-  console.log(ship.includes(shot));		
+-  if (ship.includes(shot) && !attempPositions.toString().includes(shot)) {		
+-    commandMessage.innerHTML = "Hit, nice work commander!";		
+-    console.log("Hit, nice work commander!");		
+-    hits++;		
+-    if (hits == 5) {		
+-      sunkShip.innerHTML = `Congradulations commander we have sunk the enemy ship!`;		
+-      console.log(`Congradulations commander we have sunk the enemy ship!`);		
+-      hits = 0;		
+-    }		
+-  } else if (attempPositions.toString().includes(shot)) {		
+-    commandMessage.innerHTML = "We have already fired on that position commader try again.";		
+-    console.log("We have already fired on that position commader try again.")		
+-  } else {		
+-    commandMessage.innerHTML = "We have missed commander. Lets try again!";		
+-    console.log("We have missed commander. Lets try again!");		
+-  }		
+-		
+-}
