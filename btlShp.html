@@ -9,14 +9,23 @@
 <body>
   <div class="battleShipGame" style="width:1000px; text-align:center; margin:0 auto;">
       <h1>Lets Play BattleShip!</h1>
-      <h3>Where would you like fire commander? (enter two number from 0-6)</h3>
+      <h3>Where would you like fire commander? (enter 2 numbers from 1-8)</h3>
+      
+    
+      
       <label for="xCoord">Enter X Coordinates</label>
       <input id="xCoord" type="text">
       <p id="xCoordError"></p>
       <label for="yCoord">Enter Y Coordinates</label>
       <input id="yCoord" type="text">
       <p id="yCoordError"></p><br><br><br>
-
+      
+      <form >
+        Ship Placement Co-Ordinates: <input type="text" name="Ship" pattern="[1-8]{1},[A-Za-z]{1},[1-8]{1}" title="1-8,A-Z,1-8" id = "Ship">
+        
+          <button onclick="generateShips(Ship)">submit</button>
+      </form>
+      
       <h2 id="sunkShip"></h2>
       <h4 id="commandMessage"></h4>
       <button id="submitCord" style="text-align: center" onclick="fireShot()">FIRE!</button>

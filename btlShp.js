@@ -1,11 +1,28 @@
-(function () {
+/*(function () {
   generateShips();
 
-}());
+}());*/
+
+
 
 var attempPositions = [];
 var hits =0;
-
+function generateShips() {
+  var Ship = document.getElementById("Ship");
+    Ship = Ship.value;
+    var res = Ship.split(",");
+    var rowShip = res[0];
+    var colShip = res[1];
+    var Direction = res[2];
+    colShip = res[1]
+    Number(colship)
+    alert (colShip)
+ /* console.log(centerX, centerY);
+  var shipStart = [centerX - 1, centerY];
+  var shipCenter = [centerX, centerY];
+  var shipEnd = [centerX + 1, centerY];
+  ship = [shipStart, shipCenter, shipEnd];*/
+}
 var fireShot = function () {
 
   var landingX = document.getElementById("xCoord");
@@ -13,8 +30,8 @@ var fireShot = function () {
   var xError = document.getElementById("xCoordError");
   var yError = document.getElementById("yCoordError");
   if ((!(landingX.value == "") && !(landingY.value == ""))
-    && (landingX.value <= 7 && landingX.value >= 0)
-    && (landingY.value <= 7 && landingY.value >= 0)) {
+    && (landingX.value <= 8 && landingX.value >= 0)
+    && (landingY.value <= 8 && landingY.value >= 0)) {
     landingX.style.borderColor = '';
     landingY.style.borderColor = '';
     xError.innerHTML = "";
@@ -37,15 +54,7 @@ var fireShot = function () {
   // let attempt = prompt('Where would you like fire commander? (enter two number from 0-6. EX. 2,5)');
 }
 
-function generateShips() {
-  var centerX = Math.floor(Math.random() * (6 - 1) + 1);
-  var centerY = Math.floor(Math.random() * (8 - 1) + 1);
-  console.log(centerX, centerY);
-  var shipStart = [centerX - 1, centerY];
-  var shipCenter = [centerX, centerY];
-  var shipEnd = [centerX + 1, centerY];
-  ship = [shipStart, shipCenter, shipEnd];
-}
+
 
 function hitShip(shot, ship) {
   var commandMessage = document.getElementById("commandMessage");
@@ -72,4 +81,3 @@ function hitShip(shot, ship) {
   }
 
 }
-
