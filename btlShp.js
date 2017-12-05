@@ -114,6 +114,7 @@ var fireShot = function () {
     shotAttempt = [Number(landingX.value), Number(landingY.value)];
     hitShip(shotAttempt.toString(), ship.toString());
     attempPositions.push([Number(landingX.value), Number(landingY.value)]);
+				console.log(`attempPositions ${attempPositions}`);
   } else {
     if (landingX.value == "" || landingX.value >= 7 || landingX.value < 0) {
       landingX.style.borderColor = 'red';
@@ -139,7 +140,6 @@ function hitShip(shot, ship) {
   if (ship.includes(shot) && !attempPositions.toString().includes(shot)) {
     commandMessage.innerHTML = "Hit, nice work commander!";
     console.log("Hit, nice work commander!");
-    console.log(`attempPositions ${attempPositions}`)
     hits++;
     if (hits == 3) {
       sunkShip.innerHTML = `Congradulations commander we have sunk the enemy ship!`;

@@ -19,12 +19,16 @@
       <label for="yCoord">Enter Y Coordinates</label>
       <input id="yCoord" type="text">
       <p id="yCoordError"></p><br><br><br>
+
+      <label for="ship-placement-input">Ship Placement Co-Ordinates:</label>
+      <input id="ship-placement-input" type="text" pattern="[1-8]{1},[A-Za-z]{1},[1-8]{1}" placeholder="1-8,A-Z,1-8">
+      <button id="place-ships" onclick="generateShips(ship-placement-input)">Place Ship(s)</button>
       
-      <form >
-        Ship Placement Co-Ordinates: <input type="text" name="Ship" pattern="[1-8]{1},[A-Za-z]{1},[1-8]{1}" title="1-8,A-Z,1-8" id = "Ship">
-        
-          <button onclick="generateShips(Ship)">submit</button>
-      </form>
+      <!--<form >-->
+        <!--Ship Placement Co-Ordinates: <input type="text" name="Ship" pattern="[1-8]{1},[A-Za-z]{1},[1-8]{1}" title="1-8,A-Z,1-8" id = "Ship">-->
+        <!---->
+          <!--<button onclick="generateShips(Ship)">submit</button>-->
+      <!--</form>-->
       
       <h2 id="sunkShip"></h2>
       <h4 id="commandMessage"></h4>
