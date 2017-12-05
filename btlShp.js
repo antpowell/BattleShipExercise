@@ -12,9 +12,7 @@ var fireShot = function () {
   var landingY = document.getElementById("yCoord");
   var xError = document.getElementById("xCoordError");
   var yError = document.getElementById("yCoordError");
-  if ((!(landingX.value == "") && !(landingY.value == ""))
-    && (landingX.value <= 7 && landingX.value >= 0)
-    && (landingY.value <= 7 && landingY.value >= 0)) {
+  if ((!(landingX.value == "") && !(landingY.value == "")) && (landingX.value <= 7 && landingX.value >= 0) && (landingY.value <= 7 && landingY.value >= 0)) {
     landingX.style.borderColor = '';
     landingY.style.borderColor = '';
     xError.innerHTML = "";
@@ -23,6 +21,7 @@ var fireShot = function () {
     shotAttempt = [Number(landingX.value), Number(landingY.value)];
     hitShip(shotAttempt.toString(), ship.toString());
     attempPositions.push([Number(landingX.value), Number(landingY.value)]);
+				console.log(`attempPositions ${attempPositions}`);
   } else {
     if (landingX.value == "" || landingX.value >= 7 || landingX.value < 0) {
       landingX.style.borderColor = 'red';
@@ -33,9 +32,8 @@ var fireShot = function () {
       yError.innerHTML = "Must enter a number between 0-6";
     }
   }
-
   // let attempt = prompt('Where would you like fire commander? (enter two number from 0-6. EX. 2,5)');
-}
+};
 
 function generateShips() {
   var centerX = Math.floor(Math.random() * (6 - 1) + 1);
@@ -56,7 +54,6 @@ function hitShip(shot, ship) {
   if (ship.includes(shot) && !attempPositions.toString().includes(shot)) {
     commandMessage.innerHTML = "Hit, nice work commander!";
     console.log("Hit, nice work commander!");
-    console.log(`attempPositions ${attempPositions}`)
     hits++;
     if (hits == 3) {
       sunkShip.innerHTML = `Congradulations commander we have sunk the enemy ship!`;
