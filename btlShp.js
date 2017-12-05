@@ -13,9 +13,6 @@ function generateShips() {
     var rowShip = res[0];
     var colShip = res[1];
     var Direction = res[2];
-    colShip = res[1]
-    Number(colship)
-    alert (colShip)
  /* console.log(centerX, centerY);
   var shipStart = [centerX - 1, centerY];
   var shipCenter = [centerX, centerY];
