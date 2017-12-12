@@ -9,16 +9,16 @@ function generateShips() {
     var rows = document.getElementById('ship-placement-input').value.split("\n").length;
     
     
-    
+    var i=0;
     while(rows > 0){
     var Ship = document.getElementById("ship-placement-input");
 		var invalidDirectionMessageText = document.getElementById("commandMessage");
 
 		Ship = Ship.value;
 		//var res = Ship.split(",");
-		var colShip = Ship.substr(0, 1);
-		var rowShip = Ship.substr(1, 1);
-		var Direction = Ship.substr(3, 1);
+		var colShip = Ship.substr(i, 1);
+		var rowShip = Ship.substr(i+1, 1);
+		var Direction = Ship.substr(i+3, 1);
         alert(colShip);
         alert(rowShip);
         alert(Direction);
@@ -124,6 +124,7 @@ function generateShips() {
 				invalidDirectionMessageText.innerHTML = "Invalid ship placement Commander, all your troops were lost...";
 		}
         rows--;
+        i=i+5;
 }
 }
 var fireShot = function () {
