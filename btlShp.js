@@ -15,15 +15,12 @@ function generateShips() {
 		var invalidDirectionMessageText = document.getElementById("commandMessage");
 
 		Ship = Ship.value;
-		//var res = Ship.split(",");
 		var colShip = Ship.substr(i, 1);
-		var rowShip = Ship.substr(i+1, 1);
+		var rowShip = Number(Ship.substr(i+1, 1));
 		var Direction = Ship.substr(i+3, 1);
-        alert(colShip);
-        alert(rowShip);
-        alert(Direction);
+       
         
-		switch (Direction) {
+		switch (colShip) {
 				case 'a' || 'A':
 						colShip = 1
 						break;
@@ -51,6 +48,7 @@ function generateShips() {
 		}
         
 		var xship = rowShip - 1;
+        var xship = 7-xship;
 		xship *= 8;
 		xship += colShip -1;
 		var shipStart = xship;
