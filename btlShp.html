@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,64 +7,30 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="battleShipGame" style="width:1000px; text-align:center; margin:0 auto;">
-      <h1>Lets Play BattleShip!</h1>
-      <h3>Where would you like fire commander? (enter two number from 0-6)</h3>
-      <label for="xCoord">Enter X Coordinates</label>
-      <input id="xCoord" type="text">
-      <p id="xCoordError"></p>
-      <label for="yCoord">Enter Y Coordinates</label>
-      <input id="yCoord" type="text">
-      <p id="yCoordError"></p><br><br><br>
+<div class="battleShipGame" style="width:1000px; text-align:center; margin:0 auto;">
+  <h1>Lets Play BattleShip!</h1>
+  <h3>Where would you like fire commander? (enter 2 numbers from 0-7)</h3>
 
-      <div class="board">
-        
-      </div>
 
-      <h2 id="sunkShip"></h2>
-      <h4 id="commandMessage"></h4>
-      <button id="submitCord" style="text-align: center" onclick="fireShot()">FIRE!</button>
-      <button id="reset" onclick="reset()">Restart</button>
-  </div>
-  
-  <script src="btlShp.js" ></script>
+  <label for="xCoord">Enter X Coordinates</label>
+  <input id="xCoord" type="text">
+  <p id="xCoordError"></p>
+  <label for="yCoord">Enter Y Coordinates</label>
+  <input id="yCoord" type="text">
+  <p id="yCoordError"></p><br><br><br>
+
+  <label for="ship-placement-input">Ship Placement Co-Ordinates: </label>
+  <input type="text" id="ship-placement-input" name="ship-placement-input" pattern="[1-8]{1},[A-Za-z]{1},[1-8]{1}" placeholder="1-8,A-Z,1-8">
+  <button id="generate-ship" onclick="generateShips()">Place Ship(s)</button>
+
+  <h2 id="sunkShip"></h2>
+  <h4 id="commandMessage"></h4>
+  <button id="submitCord" style="text-align: center" onclick="fireShot()">FIRE!</button>
+  <button id="reset" onclick="reset()">Restart</button>
+
+  <h1 id="attempts"></h1>
+</div>
+
+<script src="btlShp.js"></script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <div class="battleShipGame" style="width:1000px; text-align:center; margin:0 auto;">
-      <h1>Lets Play BattleShip!</h1>
-      <h3>Where would you like fire commander? (enter 2 numbers from 1-8)</h3>
-      
-    
-      
-      <label for="xCoord">Enter X Coordinates</label>
-      <input id="xCoord" type="text">
-      <p id="xCoordError"></p>
-      <label for="yCoord">Enter Y Coordinates</label>
-      <input id="yCoord" type="text">
-      <p id="yCoordError"></p><br><br><br>
-      
-      <form >
-        Ship Placement Co-Ordinates: <input type="text" name="Ship" pattern="[1-8]{1},[A-Za-z]{1},[1-8]{1}" title="1-8,A-Z,1-8" id = "Ship">
-        
-          <button onclick="generateShips(Ship)">submit</button>
-      </form>
-      
-      <h2 id="sunkShip"></h2>
-      <h4 id="commandMessage"></h4>
-      <button id="submitCord" style="text-align: center" onclick="fireShot()">FIRE!</button>
-      <button id="reset" onclick="reset()">Restart</button>
-  </div>
-  
-  <script src="btlShp.js" ></script>
-</body>
->>>>>>> 0c7ea9f817a9c65f86cf84d5597245b9514e3f2c
 </html>
