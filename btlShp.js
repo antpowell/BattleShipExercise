@@ -44,13 +44,6 @@ function generateShips() {
 		} else {
 				console.log(false);
 		}
-		// var centerX = Math.floor(Math.random() * (6 - 1) + 1);
-		// var centerY = Math.floor(Math.random() * (8 - 1) + 1);
-		// console.log(centerX, centerY);
-		// var shipStart = [centerX - 1, centerY];
-		// var shipCenter = [centerX, centerY];
-		// var shipEnd = [centerX + 1, centerY];
-		// ship = [shipStart, shipCenter, shipEnd];
 }
 
 function hitShip(shotAttempt) {
